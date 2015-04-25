@@ -14,6 +14,7 @@
 		FCC245AA1AEB2E3600E20222 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC245A91AEB2E3600E20222 /* Images.xcassets */; };
 		FCC245AD1AEB2E3600E20222 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCC245AB1AEB2E3600E20222 /* LaunchScreen.xib */; };
 		FCC245B91AEB2E3600E20222 /* onpurplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC245B81AEB2E3600E20222 /* onpurplesTests.swift */; };
+		FCC245C31AEB2E5C00E20222 /* carimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCC245C21AEB2E5C00E20222 /* carimage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		FCC245B21AEB2E3600E20222 /* onpurplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = onpurplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC245B71AEB2E3600E20222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC245B81AEB2E3600E20222 /* onpurplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onpurplesTests.swift; sourceTree = "<group>"; };
+		FCC245C21AEB2E5C00E20222 /* carimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = carimage.jpg; sourceTree = "<group>"; };
+		FCC245C41AEB45D900E20222 /* onpurples-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "onpurples-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +82,7 @@
 		FCC2459C1AEB2E3600E20222 /* onpurples */ = {
 			isa = PBXGroup;
 			children = (
+				FCC245C21AEB2E5C00E20222 /* carimage.jpg */,
 				FCC2459F1AEB2E3600E20222 /* AppDelegate.swift */,
 				FCC245A41AEB2E3600E20222 /* ViewController.swift */,
 				FCC245A61AEB2E3600E20222 /* Main.storyboard */,
@@ -86,6 +90,7 @@
 				FCC245AB1AEB2E3600E20222 /* LaunchScreen.xib */,
 				FCC245A11AEB2E3600E20222 /* onpurples.xcdatamodeld */,
 				FCC2459D1AEB2E3600E20222 /* Supporting Files */,
+				FCC245C41AEB45D900E20222 /* onpurples-Bridging-Header.h */,
 			);
 			path = onpurples;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCC245C31AEB2E5C00E20222 /* carimage.jpg in Resources */,
 				FCC245A81AEB2E3600E20222 /* Main.storyboard in Resources */,
 				FCC245AD1AEB2E3600E20222 /* LaunchScreen.xib in Resources */,
 				FCC245AA1AEB2E3600E20222 /* Images.xcassets in Resources */,
@@ -340,9 +346,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = onpurples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "onpurples/onpurples-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +359,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = onpurples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "onpurples/onpurples-Bridging-Header.h";
 			};
 			name = Release;
 		};
