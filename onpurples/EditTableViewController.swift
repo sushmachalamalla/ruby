@@ -1,42 +1,46 @@
 //
-//  DetailsTableViewController.swift
+//  EditTableViewController.swift
 //  onpurples
 //
-//  Created by Sushma Reddy on 4/28/15.
+//  Created by Sushma Reddy on 5/3/15.
 //  Copyright (c) 2015 Sushma Reddy. All rights reserved.
 //
 
 import UIKit
 
-class DetailsTableViewController: UITableViewController {
-   var currentObject : PFObject?
-    
-    
-    @IBOutlet var to: UITableViewCell!
-    @IBOutlet var from: UITableViewCell!
-    
+class EditTableViewController: UITableViewController {
 
-    //@IBOutlet var isfavourite: UIBarButtonItem!
-   
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet var from: UITextField!
+    
+    @IBOutlet var to: UITextField!
+
+    @IBAction func savebutton(sender: AnyObject) {
         
-       
-        if let object = currentObject {
-             
-            to.detailTextLabel?.text = object["To"] as? String
-            from.detailTextLabel?.text = object["From"] as? String
-            //isfavourite.text = object["Favourites"] as? String
-            
-        }
-      //  self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        var addpostvar = PFObject(className:"Ride")
+        
+       // addpostvar["createdby"] = PFUser.currentUser()
+        
+        addpostvar["From"] = from.text
+        addpostvar["To"] = to.text
+        // Save the data back to the server in a background task
+        addpostvar.saveEventually()
+        
+        // Return to table view
+        self.navigationController?.popViewControllerAnimated(true)
+        self.performSegueWithIdentifier("AddPostClosingSegue", sender: self)
     }
     
-   // @IBAction func favourite(sender: AnyObject) {
-        
-   // }
+
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,14 +52,14 @@ class DetailsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 2
+        return 0
     }
 
-   /* override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 0
-    }*/
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

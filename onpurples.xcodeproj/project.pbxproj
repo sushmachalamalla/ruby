@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC41EAD91AF66E5F00AE90F7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41EAD81AF66E5F00AE90F7 /* RegistrationViewController.swift */; };
+		FC41EADD1AF6E28E00AE90F7 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41EADC1AF6E28E00AE90F7 /* MoreTableViewController.swift */; };
+		FC41EADF1AF727A400AE90F7 /* MypostsRideDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41EADE1AF727A400AE90F7 /* MypostsRideDetailsTableViewController.swift */; };
+		FC41EAE11AF72CED00AE90F7 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41EAE01AF72CED00AE90F7 /* EditTableViewController.swift */; };
 		FC6A8CD61AF05959000BC7BA /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6A8CD51AF05959000BC7BA /* DetailsTableViewController.swift */; };
 		FCC245A01AEB2E3600E20222 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2459F1AEB2E3600E20222 /* AppDelegate.swift */; };
 		FCC245A31AEB2E3600E20222 /* onpurples.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCC245A11AEB2E3600E20222 /* onpurples.xcdatamodeld */; };
@@ -50,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC41EAD81AF66E5F00AE90F7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		FC41EADC1AF6E28E00AE90F7 /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		FC41EADE1AF727A400AE90F7 /* MypostsRideDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MypostsRideDetailsTableViewController.swift; sourceTree = "<group>"; };
+		FC41EAE01AF72CED00AE90F7 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		FC6A8CD51AF05959000BC7BA /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		FCC2459A1AEB2E3600E20222 /* onpurples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = onpurples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC2459E1AEB2E3600E20222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +178,10 @@
 				FCC59B611AEDA9F300F390DD /* MypostsTableViewController.swift */,
 				FC6A8CD51AF05959000BC7BA /* DetailsTableViewController.swift */,
 				FCE753A51AF1AF39006D07D2 /* AddPostTableViewController.swift */,
+				FC41EAD81AF66E5F00AE90F7 /* RegistrationViewController.swift */,
+				FC41EADC1AF6E28E00AE90F7 /* MoreTableViewController.swift */,
+				FC41EADE1AF727A400AE90F7 /* MypostsRideDetailsTableViewController.swift */,
+				FC41EAE01AF72CED00AE90F7 /* EditTableViewController.swift */,
 			);
 			path = onpurples;
 			sourceTree = "<group>";
@@ -314,11 +326,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC59B5E1AED9FB400F390DD /* HomeTableViewController.swift in Sources */,
+				FC41EADD1AF6E28E00AE90F7 /* MoreTableViewController.swift in Sources */,
 				FCC245A51AEB2E3600E20222 /* ViewController.swift in Sources */,
+				FC41EAD91AF66E5F00AE90F7 /* RegistrationViewController.swift in Sources */,
 				FCE753A61AF1AF39006D07D2 /* AddPostTableViewController.swift in Sources */,
 				FCC245A31AEB2E3600E20222 /* onpurples.xcdatamodeld in Sources */,
+				FC41EAE11AF72CED00AE90F7 /* EditTableViewController.swift in Sources */,
 				FCC245A01AEB2E3600E20222 /* AppDelegate.swift in Sources */,
 				FC6A8CD61AF05959000BC7BA /* DetailsTableViewController.swift in Sources */,
+				FC41EADF1AF727A400AE90F7 /* MypostsRideDetailsTableViewController.swift in Sources */,
 				FCC59B621AEDA9F300F390DD /* MypostsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -436,7 +436,10 @@ NS_REQUIRES_PROPERTY_DEFINITIONS
  @param objects The array of objects to delete.
 
  @returns Returns whether the delete succeeded.
+ 
+
  */
+
 + (BOOL)deleteAll:(PF_NULLABLE NSArray *)objects;
 
 /*!

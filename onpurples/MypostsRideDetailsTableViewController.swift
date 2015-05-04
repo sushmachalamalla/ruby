@@ -1,42 +1,35 @@
 //
-//  DetailsTableViewController.swift
+//  MypostsRideDetailsTableViewController.swift
 //  onpurples
 //
-//  Created by Sushma Reddy on 4/28/15.
+//  Created by Sushma Reddy on 5/3/15.
 //  Copyright (c) 2015 Sushma Reddy. All rights reserved.
 //
 
 import UIKit
 
-class DetailsTableViewController: UITableViewController {
-   var currentObject : PFObject?
-    
-    
-    @IBOutlet var to: UITableViewCell!
-    @IBOutlet var from: UITableViewCell!
-    
+class MypostsRideDetailsTableViewController: UITableViewController {
 
-    //@IBOutlet var isfavourite: UIBarButtonItem!
-   
-   
+    var currentObject : PFObject?
+    
+    
+    @IBOutlet var from: UITextField!
+    
+    @IBOutlet var to: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
+
         if let object = currentObject {
-             
-            to.detailTextLabel?.text = object["To"] as? String
-            from.detailTextLabel?.text = object["From"] as? String
+            
+            to.text = object["To"] as? String
+            from.text = object["From"] as? String
             //isfavourite.text = object["Favourites"] as? String
             
         }
-      //  self.navigationItem.rightBarButtonItem = self.editButtonItem()
+         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
     }
-    
-   // @IBAction func favourite(sender: AnyObject) {
-        
-   // }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,11 +44,11 @@ class DetailsTableViewController: UITableViewController {
         return 2
     }
 
-   /* override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
-    }*/
+        return 1
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

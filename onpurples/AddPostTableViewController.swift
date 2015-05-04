@@ -11,12 +11,11 @@ import UIKit
 class AddPostTableViewController: UITableViewController {
 
     
-   //var currentObject : PFObject?
+   var currentObject : PFObject?
     
     @IBOutlet var from: UITextField!
     
     @IBOutlet var to: UITextField!
-    
     
     
 
@@ -25,13 +24,16 @@ class AddPostTableViewController: UITableViewController {
       
         var addpostvar = PFObject(className:"Ride")
         
+        addpostvar["createdby"] = PFUser.currentUser()
+        
         addpostvar["From"] = from.text
         addpostvar["To"] = to.text
                 // Save the data back to the server in a background task
         addpostvar.saveEventually()
-        
+       
         // Return to table view
         self.navigationController?.popViewControllerAnimated(true)
+        //self.performSegueWithIdentifier("AddPostClosingSegue", sender: self)
     }
     
     

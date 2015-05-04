@@ -11,8 +11,15 @@ import UIKit
 class HomeTableViewController: PFQueryTableViewController {
     
     
-    
     @IBOutlet var addpostbutton: UIBarButtonItem!
+    
+    @IBAction func cancelButton(segue:UIStoryboardSegue) {
+        
+    }
+    
+    /*@IBAction func saveButton(segue:UIStoryboardSegue) {
+        
+    }*/
         // Initialise the PFQueryTable tableview
     override init!(style: UITableViewStyle, className: String!) {
         super.init(style: style, className: className)
@@ -27,7 +34,7 @@ class HomeTableViewController: PFQueryTableViewController {
         self.paginationEnabled = false
     }
     
-   
+    var rideObject = PFObject(className:"Ride")
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject) -> PFTableViewCell {
         
@@ -47,7 +54,17 @@ class HomeTableViewController: PFQueryTableViewController {
         return cell
     }
 
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+                    // Delete the row from the data source
+            let objectToDelete = objects[indexPath.row] as? PFObject
+                   // objectToDelete.deleteEventually;()
+                    self.loadObjects()
+        
+        
+        }
+       /*override func numberOfSectionsInTableView(tableView: UIT3ableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1

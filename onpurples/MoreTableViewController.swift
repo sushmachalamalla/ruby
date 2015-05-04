@@ -1,42 +1,33 @@
 //
-//  DetailsTableViewController.swift
+//  MoreTableViewController.swift
 //  onpurples
 //
-//  Created by Sushma Reddy on 4/28/15.
+//  Created by Sushma Reddy on 5/3/15.
 //  Copyright (c) 2015 Sushma Reddy. All rights reserved.
 //
 
 import UIKit
 
-class DetailsTableViewController: UITableViewController {
-   var currentObject : PFObject?
+class MoreTableViewController: UITableViewController {
     
-    
-    @IBOutlet var to: UITableViewCell!
-    @IBOutlet var from: UITableViewCell!
-    
+     @IBAction func signoutButton(sender: AnyObject) {
+        
+        PFUser.logOut()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("ViewController") as UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
 
-    //@IBOutlet var isfavourite: UIBarButtonItem!
-   
-   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        if let object = currentObject {
-             
-            to.detailTextLabel?.text = object["To"] as? String
-            from.detailTextLabel?.text = object["From"] as? String
-            //isfavourite.text = object["Favourites"] as? String
-            
-        }
-      //  self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-   // @IBAction func favourite(sender: AnyObject) {
-        
-   // }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,14 +39,14 @@ class DetailsTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 2
+        return 1
     }
 
-   /* override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
-    }*/
+        return 1
+    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
